@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Soal Hafalan</title>
+  <link rel="stylesheet" href="/quiz.css"> <!-- ganti ke file baru -->
+</head>
+<body class="quiz-wrapper">
+  <main class="quiz-box">
+    <div id="start-screen">
+      <h2>Masukkan Nama Kamu</h2>
+      <input type="text" id="namaInput" placeholder="Nama kamu" />
+      <button onclick="mulaiGame()">Mulai</button>
+    </div>
+
+    <div class="container" style="display: none;">
+      <h2 id="soal">Soal</h2>
+      <div id="pilihan" class="quiz-options"></div>
+      <p id="hasil"></p>
+      <button id="next" onclick="nextQuestion()">Next</button>
+    </div>
+  </main>
+
+  <!-- Script dinamis -->
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    const juz = params.get("juz");
+
+    const script = document.createElement("script");
+    script.src = `data/juz${juz}.js`;
+    script.onload = () => {
+      const mainScript = document.createElement("script");
+      mainScript.src = "../quiz.js";
+      document.body.appendChild(mainScript);
+    };
+    document.body.appendChild(script);
+  </script>
+</body>
+</html>

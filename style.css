@@ -1,0 +1,298 @@
+/* GLOBAL STYLES */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Karla", sans-serif;
+    list-style: none;
+    text-decoration: none;
+}
+
+/* HEADER */
+header {
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 1000;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 5%;
+    background: transparent;
+    transition: padding 0.3s ease;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: 700;
+    color: white;
+}
+
+.navlist {
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.navlist a {
+    color: white;
+    font-size: 14px;
+    font-weight: 600;
+    border-bottom: 2px solid transparent;
+    transition: all 0.3s ease;
+}
+
+.navlist a:hover {
+    border-bottom: 2px solid white;
+}
+
+#menu-icon {
+    color: white;
+    font-size: 28px;
+    z-index: 10001;
+    cursor: pointer;
+    display: none;
+}
+
+/* HERO SECTION */
+.hero {
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(to right, #8b2c00, #ff6b00, #ffb347);
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    padding: 120px 5% 40px;
+    text-align: center;
+}
+
+.hero-text {
+    flex: 1 1 400px;
+    max-width: 600px;
+    color: white;
+}
+
+.hero-text h5 {
+    font-size: 14px;
+    font-weight: 400;
+    margin-bottom: 20px;
+}
+
+.hero-text h1 {
+    font-family: "Forum", serif;
+    font-size: 36px;
+    line-height: 1.2;
+    margin: 0 0 20px;
+}
+
+.hero-text h4 {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.hero-text p {
+    font-size: 14px;
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+
+.hero-text a {
+    display: inline-block;
+    color: white;
+    background: #ca923f;
+    padding: 10px 25px;
+    font-size: 14px;
+    border-radius: 25px;
+    border: 1px solid transparent;
+    transition: all 0.3s ease;
+    margin: 5px;
+}
+
+.hero-text a:hover {
+    background: transparent;
+    border: 1px solid white;
+    transform: translateX(4px);
+}
+
+.hero-text a.ctaa {
+    background: transparent;
+    border: 1px solid white;
+}
+
+.hero-text a.ctaa i {
+    margin-right: 5px;
+    vertical-align: middle;
+}
+
+.hero-img {
+    flex: 1 1 300px;
+    text-align: center;
+}
+
+.hero-img img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* ICONS */
+.icons {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 50%;
+    left: 20px;
+    transform: translateY(-50%);
+    z-index: 1000;
+}
+
+.icons i {
+    display: block;
+    font-size: 22px;
+    color: white;
+    margin: 15px 0;
+    transition: all 0.3s ease;
+}
+
+.icons i:hover {
+    color: #95764d;
+    transform: translateY(-5px);
+}
+
+.scroll-down {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+}
+
+.scroll-down i {
+    font-size: 22px;
+    background: #958a4d;
+    color: white;
+    padding: 10px;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+}
+
+.scroll-down i:hover {
+    transform: translateY(-5px);
+}
+/* STYLE untuk Pilih Juz (hafalan/index.html) */
+body.pilih-juz {
+background: linear-gradient(to right, #8b2c00, #ff6b00, #ffb347);
+  font-family: 'Karla', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 32px 16px;
+}
+
+.juz-container {
+  text-align: center;
+  background-color: white;
+  padding: 32px;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+  width: 100%;
+  max-width: 500px;
+}
+
+.juz-container h2 {
+  color: #F57C00;
+  font-size: 24px;
+  margin-bottom: 24px;
+}
+
+.juz-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.juz-grid a {
+  background-color: #F57C00;
+  color: white;
+  padding: 14px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.juz-grid a:hover {
+  background-color: #e56b00;
+}
+
+/* Tombol di soal */
+button {
+  background-color: #F57C00;
+  color: white;
+  border: none;
+  padding: 14px 20px;
+  font-size: 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+  background-color: #e56b00;
+  transform: scale(1.03);
+}
+
+/* MEDIA QUERIES */
+@media (max-width: 990px) {
+    #menu-icon {
+        display: block;
+    }
+
+    .navlist {
+        position: absolute;
+        top: 100%;
+        right: -100%;
+        width: 250px;
+        height: auto;
+        background: #957e4d;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+        transition: right 0.3s ease;
+    }
+
+    .navlist.open {
+        right: 0;
+    }
+
+    .navlist a {
+        margin: 10px 0;
+    }
+}
+
+@media (max-width: 680px) {
+    .hero-text h1 {
+        font-size: 28px;
+    }
+
+    .hero-text h4,
+    .hero-text h5,
+    .hero-text p {
+        font-size: 13px;
+    }
+
+    .hero-text a {
+        padding: 8px 20px;
+        font-size: 13px;
+    }
+
+    .icons,
+    .scroll-down {
+        display: none;
+    }
+}
