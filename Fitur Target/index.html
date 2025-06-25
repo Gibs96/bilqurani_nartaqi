@@ -1,0 +1,38 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+    <title>Misi hari ini</title>
+    <script src="https://kit.fontawesome.com/1357506e11.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="kontainer">
+        <div class="todo-app">
+            <h1>Target hari ini</h1>
+            <div class="stat-container">
+                <div class="details">
+                    <h3>Semangat !</h3>
+                    <div id="progressbar">
+                        <div id="progress"></div>
+                    </div>
+                </div>
+                <div class="numbers" id="numbers">0 / 0</div>
+            </div>
+            <form class="input-area">
+                <input type="text" id="task-input" placeholder="buat target">
+                <button type="submit" id="add-task-btn"><i class="fa-solid fa-plus"></i></button>
+            </form>
+            <div class="todos-kontainer">
+                <ul id="task-list"></ul>
+                <img src="" class="empty-image" style="width: 100px; height: auto;" alt="">
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tsparticles/confetti@3.0.3/tsparticles.confetti.bundle.min.js"></script>
+</body>
+</html>
